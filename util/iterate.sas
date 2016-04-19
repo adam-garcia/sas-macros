@@ -1,0 +1,10 @@
+%macro iterate(list, function, delim=%str( ));
+    %local i;
+    %let i=1;
+    %do %while (%scan(&list, &i, &delim) ne %str());
+        %local el;
+        %let el = %scan(&list, &i, %str( )); 
+        %&function(&el);
+        %let i = %eval(&i+1);
+    %end;
+%mend;
