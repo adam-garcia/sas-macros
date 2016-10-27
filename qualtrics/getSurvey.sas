@@ -45,10 +45,10 @@
             " ", "\ ");
         file opts;
         put '{';
-        put '"surveyID":"' "&svid" '",';
-        put '"useLabels":"' "&labels" '",';
-        put '"format":"' "&fmt" '",';
-        put '"apiToken":"' "&&api" '"';
+            put '"surveyID":"' "&svid" '",';
+            put '"useLabels":"' "&labels" '",';
+            put '"format":"' "&fmt" '",';
+            put '"apiToken":"' "&&api" '"';
         put '}';
     run;
     * x "python &py -i '&optsFile'";
